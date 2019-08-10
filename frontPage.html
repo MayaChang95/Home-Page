@@ -1,0 +1,188 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Chang Shih Han</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Rosarivo&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="frontPage.css">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Caslon+Display|Zilla+Slab&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+	<body onscroll="showBarScroll()">
+		<div id="mySidenav" class="sidenav">
+		  <a href="#" id="about" onclick="toggleBar(this)">About</a>
+		  <a href="#" id="projects" onclick="toggleBar(this)">Projects</a>
+		  <a href="#" id="contact" onclick="toggleBar(this)">Contact</a>
+		</div>		
+		<div id ="intro">
+			<h1>Hi, my name is Chang Shih Han</h1>
+			<button id="view">View Projects</button>
+		</div>
+		<div id ="aboutMe">
+		<img src="images/maya.png" style="width:10%; height: 20%; position: relative; left:45% ">
+
+			<h2 class="header">About me</h2>
+			<p>My name is Chang Shih Han (Maya). I’ve been working as a customer support at an online payment solutions company called HiTRUST for a year. My job is mainly solving any kinds of problems that are related to our payment system. Such as, assisting customers in the set-up process and troubleshooting when something is not working.</p>
+			<h2 class="header">Work Experience</h2>
+			<ul>
+				<li>Customer Support • HiTRUST • 2018, 2019</li>
+				<li>Cram School Teacher • Jia Yuan • 2016, 2017</li>
+			</ul>
+			<h2 class="header">Education</h2>
+			<ul>
+				<li>B.A.• Feng Chia University • 2014~2018</li>
+				<li>Exchange Semester in Sweden • Halmstad University • 2017</li>
+			</ul>
+			<h2 class="header">Language Skills</h2>
+			<ul>
+				<li>Fluent in Chinese (Native)</li>
+				<li>Fluent in English (IELTS 6.5).</li>
+				
+			</ul>
+
+			<h2 class="header">Technicial Skills</h2>
+			<ul>
+				<li>HTML, Javascript, CSS </li>
+				<li>Limited knowledge of Java</li>
+			</ul>
+		</div>
+
+		<div id="container">
+			<h2 class="header">Projects</h2>
+			<div class = "imageLeft">
+				<img src="images/resize-calculator.png">
+				<div class="describtion">
+					<h3 class="title">Calculator</h3>
+					<p>
+						A webpage with a calculator, the calculator uses 
+						reverse polish notation for the calculation.<br>
+						(HTML, CSS, Javascript)
+					</p>
+					
+					<button class="viewProject">View Project</button>
+					<button class="viewCode" url="https://github.com/MayaChang95/calculator">View Code</button>
+				</div>	
+			</div>
+			<div class = "imageRight">
+				<div class="describtion">
+					<h3 class="title">Card Game</h3>
+					<p>
+						A webpage for card game where the user has 
+						to flip the cards in the right order to win.<br> 
+						(HTML, CSS, Javascript)
+					</p>
+					<button class="viewProject">View Project</button>
+					<button class="viewCode">View Code</button>
+				</div>	
+				<img src="images/resize-cardGame.png">
+			</div>
+			<div class = "imageLeft">
+				<img src="images/resize-converter.png">
+				<div class="describtion">
+					<h3 class="title">Unit-Converter</h3>
+					<p>
+						A webpage for a 2-way unit conversion. Converting celsius and fahrenheit, kilos and pounds, meters, inches and feet.<br>
+						(HTML, CSS, Javascript)
+					</p>
+					<button class="viewProject">View Project</button>
+					<button class="viewCode">View Code</button>
+				</div>	
+			</div>
+			<div class = "imageRight">
+				<div class="describtion">
+					<h3 class="title">To Do List</h3>
+					<p>
+						A webpage for your own To Do List. Using local storage to store lists and names.<br>
+						(HTML, CSS, Javascript)
+					</p>
+					<button class="viewProject">View Project</button>
+					<button class="viewCode">View Code</button>
+				</div>	
+				<img src="images/resize-todolist.png">
+			</div>
+		</div>
+		<div id="contacts">
+			<h2 class="header">Contact me</h2>
+			<ul id="myContact">
+				<li ><i class="fa fa-envelope"></i>E-mail: <a href="mailto:shihhan1019@gmail.com">shihhan1019@gmail.com</a></li>
+				<li><i class="fa fa-linkedin"></i>LinkedIn: <a href="https://www.linkedin.com/in/shih-han-chang-a2724b147/">My LinkedIn</a></li>
+				<li><i class="fa fa-github"></i>GitHub: <a href>My GitHub</a></li>
+				<li><i class="fa fa-mobile"></i>Phone Number: +886 919 200 475</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$('#projects').click(function() {
+    		$('html,body').animate({
+       	 	scrollTop: $('#container').offset().top},'slow');
+		});
+		$('#view').click(function() {
+    		$('html,body').animate({
+       	 	scrollTop: $('#container').offset().top},'slow');
+		});
+		$('#about').click(function() {
+    		$('html,body').animate({
+       	 	scrollTop: $('#aboutMe').offset().top},'slow');
+		});
+		$('#contact').click(function() {
+    		$('html,body').animate({
+       	 	scrollTop: $('#contacts').offset().top},'slow');
+		});
+
+		var aboutMe = document.getElementById("about");
+		var project = document.getElementById("projects");
+		var contacts = document.getElementById("contact");
+		
+		
+		function toggleBar(buttonClick) {
+			console.log(aboutMe);
+			if(buttonClick === aboutMe){
+				aboutMe.style.left = "0px";
+				project.style.left = "-80px";
+				contacts.style.left = "-80px";
+				
+			
+			}
+			else if(buttonClick === project) {
+				project.style.left = "0px";
+				aboutMe.style.left = "-80px";
+				contacts.style.left = "-80px";
+			}
+			else if(buttonClick === contacts) {
+				contacts.style.left = "0px";
+				aboutMe.style.left = "-80px";
+				project.style.left = "-80px";
+			}
+			
+		}
+
+		function showBarScroll() {
+			
+			var y = window.pageYOffset;
+			if(770 <= y && 1455 >=y){
+				aboutMe.style.left = "0px";
+				project.style.left = "-80px";
+				contacts.style.left = "-80px";
+
+			}else if(1456 <= y && 2270 >=y) {
+				aboutMe.style.left = "-80px";
+				project.style.left = "0px";
+				contacts.style.left = "-80px";
+			}else if(2270 <= y && 3000 >=y){
+				aboutMe.style.left = "-80px";
+				project.style.left = "-80px";
+				contacts.style.left = "0px";
+
+			}else{
+				aboutMe.style.left = "0px";
+				project.style.left = "0px";
+				contacts.style.left = "0px";
+			}
+		}
+
+	</script>
+</html>
