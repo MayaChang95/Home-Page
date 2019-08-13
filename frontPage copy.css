@@ -5,9 +5,9 @@
 }
 
 body {
-	
+	height: 100vh;
 	background-color: #F2FCFF;
-	width:100%;
+	width:100vw;
 	display: grid;
 }
 
@@ -78,7 +78,6 @@ body {
 h1 {
 	font-size: 50px;
 	text-shadow: 2px 2px grey;
-	padding: 0.5em;
 
 }
 #intro {
@@ -88,6 +87,7 @@ h1 {
   	background-position: center center;
   	/* Background image doesn't tile */
  	background-repeat: no-repeat;
+
   	background-size: cover;
 	height: 788px;
 	text-align: center;
@@ -132,7 +132,6 @@ h1 {
 
 .images.left{
 	text-align:right;
-	border-left: 1px solid black;
 
 }
 
@@ -140,14 +139,15 @@ h1 {
 	max-width: 361px;
 	height: 200px;
 	border-top: 1px solid black;
-	border-bottom: 1px solid black;	
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
 	box-shadow: 0 2px 2px -2px #000000;
 }
 
 .description {
 	max-width: 361px;
 	height: 200px;
-	padding:0px 10px 0px 10px;
+	padding-left: 10px;
 	background-color: rgb(228,189,124,50%);
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;	
@@ -156,10 +156,6 @@ h1 {
 }
 .description.right, .images.right img{
 	border-right: 1px solid black;	
-}
-
-.images.left img{
-	border-left: 1px solid black;	
 }
 
 
@@ -187,7 +183,6 @@ h1 {
 
 .viewCode {
 	background-color: #e6f3ff;
-	width: 117.78px;
 }
 
 .viewProject {
@@ -232,24 +227,16 @@ i {
 
 
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 700px){
 	body {
-		grid-template-rows: auto auto auto auto;
-	}
-
-	h1 {
-		font-size: 40px;
 
 	}
 
  	#container {
  		grid-gap: 0px;
  		padding: 3em;
- 		grid-template-columns: initial;
- 		grid-template-rows: repeat(4,180px 220px);
- 		grid-row-gap: 20px;
- 		text-align: center;
- 		justify-items: center;
+ 		
+
  	}
 
  	.header {
@@ -261,70 +248,9 @@ i {
  		text-align: center;
  		width: 80%;
  	}
-
  	#myPic {
  		max-width: 20%;
  	}	
-
- 	#cardImg {
- 		grid-row: 3;
- 		justify-items: center;
- 	}
-
- 	#cardGame {
- 		grid-area: 4;
- 		text-align: center;
- 		margin: 0 auto;
- 	}
-
- 	#todoListImg {
- 		grid-area: 7;
- 		justify-items: center;
- 	}
-
- 	#todoList {
- 		grid-area: 8;
- 		margin: 0 auto;
- 		text-align: center;
- 		border-left: 1px solid black;
- 	}
-
- 	.images.left{
-		border-left:none;	
-	}
-
-
- 	.images img {
- 		border-bottom: none;
- 		border-right: 1px solid black;
- 		border-left: 1px solid black;
- 		box-shadow: 0 2px 2px -2px #000000;
- 	}
-
-
-
- 	.description {
- 		padding-top: 5px;
- 		border-top: none;
- 		border-right: 1px solid black;
- 		border-left: 1px solid black;
- 		box-shadow: 0 2px 2px -2px #000000;
-
- 	}
-
- 	#contacts {
- 		height: 20em;
- 	}
-
- 	#contacts li {
- 		font-size: 20px;
- 	}
-
- 	#container button {
- 		margin-top: 10px;
- 	}
 }
-
-
 
 

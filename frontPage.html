@@ -1,12 +1,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Chang Shih Han</title>
+	<link rel="stylesheet" href="frontPage.css" type="text/css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Rosarivo&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="frontPage.css">
 	<link href="https://fonts.googleapis.com/css?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Libre+Caslon+Display|Zilla+Slab&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,7 +23,7 @@
 			<button id="view">View Projects</button>
 		</div>
 		<div id ="aboutMe">
-		<img src="images/maya.png" style="width:10%; height: 20%; position: relative; left:45% ">
+		<img id ="myPic"src="images/maya.png">
 
 			<h2 class="header">About me</h2>
 			<p>My name is Chang Shih Han (Maya). I’ve been working as a customer support at an online payment solutions company called HiTRUST for a year. My job is mainly solving any kinds of problems that are related to our payment system. Such as, assisting customers in the set-up process and troubleshooting when something is not working.</p>
@@ -50,60 +50,52 @@
 				<li>Limited knowledge of Java</li>
 			</ul>
 		</div>
+		<h2 class="header" id="projectHd">Projects</h2>
+		<div id="container">		
+			<figure class = "images left"><img src="images/resize-calculator.png"></figure>
+			<div class="description right">
+				<h3 class="title">Calculator</h3>
+				<p>
+					A webpage with a calculator, the calculator uses 
+					reverse polish notation for the calculation.<br>
+					(HTML, CSS, Javascript)
+				</p>
+				
+				<button class="viewProject">View Project</button>
+				<button class="viewCode" onclick="window.location.href='https://github.com/MayaChang95/calculator'">View Code</button>
+			</div>	
+			<div class="description left" id = "cardGame">
+				<h3 class="title">Card Game</h3>
+				<p>
+					A webpage for card game where the user has 
+					to flip the cards in the right order to win.<br> 
+					(HTML, CSS, Javascript)
+				</p>
+				<button class="viewProject">View Project</button>
+				<button class="viewCode" onclick="window.location.href='https://github.com/MayaChang95/Card-Game'">View Code</button>
+			</div>
+			<figure class = "images right" id ="CardImg"><img src="images/resize-cardGame.png"></figure>
+			<figure class = "images left"><img src="images/resize-converter.png"></figure>
+			<div class="description right">
+				<h3 class="title">Unit-Converter</h3>
+				<p>
+					A webpage for a 2-way unit conversion. Converting celsius and fahrenheit, kilos and pounds, meters, inches and feet.<br>
+					(HTML, CSS, Javascript)
+				</p>
+				<button class="viewProject">View Project</button>
+				<button class="viewCode" onclick="window.location.href='https://github.com/MayaChang95/Unit-Converter'">View Code</button>
+			</div>
+			<div class="description left" id ="todoList">
+				<h3 class="title">To Do List</h3>
+				<p>
+					A webpage for your own To Do List. Using local storage to store lists and names.<br>
+					(HTML, CSS, Javascript)
+				</p>
+				<button class="viewProject">View Project</button>
+				<button class="viewCode" onclick="window.location.href='https://github.com/MayaChang95/To-Do-List'">View Code</button>
+			</div>
+			<figure class = "images right" id ="todoListImg"><img src="images/resize-todolist.png"></figure>
 
-		<div id="container">
-			<h2 class="header">Projects</h2>
-			<div class = "imageLeft">
-				<img src="images/resize-calculator.png">
-				<div class="describtion">
-					<h3 class="title">Calculator</h3>
-					<p>
-						A webpage with a calculator, the calculator uses 
-						reverse polish notation for the calculation.<br>
-						(HTML, CSS, Javascript)
-					</p>
-					
-					<button class="viewProject">View Project</button>
-					<button class="viewCode" onclick="window.location.href='https://github.com/MayaChang95/calculator'">View Code</button>
-				</div>	
-			</div>
-			<div class = "imageRight">
-				<div class="describtion">
-					<h3 class="title">Card Game</h3>
-					<p>
-						A webpage for card game where the user has 
-						to flip the cards in the right order to win.<br> 
-						(HTML, CSS, Javascript)
-					</p>
-					<button class="viewProject">View Project</button>
-					<button class="viewCode" onclick="window.location.href='https://github.com/MayaChang95/Card-Game'">View Code</button>
-				</div>	
-				<img src="images/resize-cardGame.png">
-			</div>
-			<div class = "imageLeft">
-				<img src="images/resize-converter.png">
-				<div class="describtion">
-					<h3 class="title">Unit-Converter</h3>
-					<p>
-						A webpage for a 2-way unit conversion. Converting celsius and fahrenheit, kilos and pounds, meters, inches and feet.<br>
-						(HTML, CSS, Javascript)
-					</p>
-					<button class="viewProject">View Project</button>
-					<button class="viewCode" onclick="window.location.href='https://github.com/MayaChang95/Unit-Converter'">View Code</button>
-				</div>	
-			</div>
-			<div class = "imageRight">
-				<div class="describtion">
-					<h3 class="title">To Do List</h3>
-					<p>
-						A webpage for your own To Do List. Using local storage to store lists and names.<br>
-						(HTML, CSS, Javascript)
-					</p>
-					<button class="viewProject">View Project</button>
-					<button class="viewCode" onclick="window.location.href='https://github.com/MayaChang95/To-Do-List'">View Code</button>
-				</div>	
-				<img src="images/resize-todolist.png">
-			</div>
 		</div>
 		<div id="contacts">
 			<h2 class="header">Contact me</h2>
@@ -115,14 +107,15 @@
 			</ul>
 		</div>
 	</body>
+
 	<script type="text/javascript">
 		$('#projects').click(function() {
     		$('html,body').animate({
-       	 	scrollTop: $('#container').offset().top},'slow');
+       	 	scrollTop: $('#projectHd').offset().top},'slow');
 		});
 		$('#view').click(function() {
     		$('html,body').animate({
-       	 	scrollTop: $('#container').offset().top},'slow');
+       	 	scrollTop: $('#projectHd').offset().top},'slow');
 		});
 		$('#about').click(function() {
     		$('html,body').animate({
@@ -163,16 +156,17 @@
 		function showBarScroll() {
 			
 			var y = window.pageYOffset;
-			if(770 <= y && 1455 >=y){
+			console.log(y);
+			if(770 <= y && 1800 >=y){
 				aboutMe.style.left = "0px";
 				project.style.left = "-80px";
 				contacts.style.left = "-80px";
 
-			}else if(1456 <= y && 2270 >=y) {
+			}else if(1801 <= y && 2000 >=y) {
 				aboutMe.style.left = "-80px";
 				project.style.left = "0px";
 				contacts.style.left = "-80px";
-			}else if(2270 <= y && 3000 >=y){
+			}else if(2000 <= y && 2500 >=y){
 				aboutMe.style.left = "-80px";
 				project.style.left = "-80px";
 				contacts.style.left = "0px";
